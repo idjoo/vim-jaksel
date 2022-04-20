@@ -1,14 +1,7 @@
-" syntax keyword jakselConditional
-"     \ kalo
-"     \ spill
-"     \ fomo
-"     \ udahan
-
 " Quit when a (custom) syntax file was already loaded
 if exists("b:current_syntax")
   finish
 endif
-
 
 " Operator
 syn match       jakselOperator      /\%(\<itu\>\|\<gak\>\)/
