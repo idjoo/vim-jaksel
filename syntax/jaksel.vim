@@ -61,12 +61,13 @@ syn keyword     jakselRepeat        fomo endup
 
 hi def link     jakselRepeat        Repeat
 
+
 " Function
 syn match       jakselFunctionCall  /\(call \|so about \)\@<=\w*/
 syn match       jakselFunctionArgs  /\(\(call \|so about \)\w* \)\@<=[^$]*/
 
 hi def link     jakselFunctionCall  Function
-hi def link     jakselFunctionArgs  Keyword
+hi def link     jakselFunctionArgs  Type
 
 
 " Comment
