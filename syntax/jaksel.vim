@@ -22,6 +22,7 @@ hi def link     jakselVariable      Keyword
 hi def link     jakselConstant      Keyword
 hi def link     jakselFunction      Identifier
 
+
 " Boolean
 syn match       jakselBooleanTrue   /\<worth it\>/
 syn match       jakselBooleanTrue   /\<positive vibes\>/
@@ -70,3 +71,6 @@ sy region       jakselComment       start=+//+ end=/$/    extend keepend
 sy region       jakselComment       start=+/\*+ end=+\*/+ extend keepend
 
 hi def link     jakselComment       Comment
+
+" TODO: Async Function
+" TODO: Try Catch & Exception
