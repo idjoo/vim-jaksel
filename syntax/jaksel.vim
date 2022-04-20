@@ -1,11 +1,15 @@
 syntax keyword jakselConditional
     \ kalo
-    \ whichis
     \ spill
     \ literally
     \ fomo
     \ udahan
     \ seriously
+
+syntax keyword jakselStorageClass seriously whichis literally skipwhite skipempty
+syntax keyword jakselBooleanTrue worth it
+syntax keyword jakselBooleanTrue positive vibes
+syntax keyword jakselBooleanFalse negative vibes
 
 syntax keyword  jakselTodos     contained TODO
 syntax region   jakselComment   start=+IMO+ end=/$/ extend keepend
