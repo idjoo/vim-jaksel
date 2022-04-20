@@ -1,4 +1,4 @@
-# jaksel.vim
+# vim-jaksel
 jaksel programming language plugin for (n)vim
 
 ## Installation
