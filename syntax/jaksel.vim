@@ -14,32 +14,40 @@ endif
 syn match       jakselOperator      /\%(\<itu\>\|\<gak\>\)/
 syn match       jakselOperator      /\%(lebih gede\|lebih kecil\)/
 syn match       jakselOperator      /\%(lebih gede sama dengan\|lebih kecil sama dengan\)/
+syn match       jakselOperator      /[-+%<>!&|^*=]=\?/
 
 hi def link     jakselOperator      Operator
 
 
 " Variable
-syn keyword     jakselVariable      whichis       skipempty
-syn keyword     jakselVariable      literally     skipempty
-syn keyword     jakselConstant      seriously     skipempty
+syn keyword     jakselVariable      whichis
+syn keyword     jakselVariable      literally
+syn keyword     jakselConstant      seriously
+syn match       jakselFunction      /\(call\|so about\|thats it sih\)/
 
 hi def link     jakselVariable      Keyword
 hi def link     jakselConstant      Keyword
-
+hi def link     jakselFunction      Identifier
 
 " Boolean
-syn match       jakselBooleanTrue   "\<worth it\>"
-syn match       jakselBooleanTrue   "\<positive vibes\>"
-syn match       jakselBooleanFalse  "\<negative vibes\>"
+syn match       jakselBooleanTrue   /\<worth it\>/
+syn match       jakselBooleanTrue   /\<positive vibes\>/
+syn match       jakselBooleanFalse  /\<negative vibes\>/
 
 hi def link     jakselBooleanTrue   Boolean
 hi def link     jakselBooleanFalse  Boolean
 
 
 " Print / Console.log
-syn keyword     jakselFunction      spill
+syn keyword     jakselBuiltIn       spill
 
-hi def link     jakselFunction      Function
+hi def link     jakselBuiltIn       Function
+
+
+" String
+syn region      jakselString        start=/\v"/ skip=/\v\\./ end=/\v"/
+
+hi def link     jakselString        String
 
 
 " Condition
@@ -53,6 +61,13 @@ syn keyword     jakselRepeat        fomo endup
 
 hi def link     jakselRepeat        Repeat
 
+" Function
+syn match       jakselFunctionCall  /\(call \|so about \)\@<=\w*/
+syn match       jakselFunctionArgs  /\(\(call \|so about \)\w* \)\@<=[^$]*/
+
+hi def link     jakselFunctionCall  Function
+hi def link     jakselFunctionArgs  Keyword
+
 
 " Comment
 sy region       jakselComment       start=+IMO+ end=/$/   extend keepend
@@ -61,16 +76,3 @@ sy region       jakselComment       start=+//+ end=/$/    extend keepend
 sy region       jakselComment       start=+/\*+ end=+\*/+ extend keepend
 
 hi def link     jakselComment       Comment
-
-
-
-
-
-
-
-
-
-
-
-
-syntax keyword  jakselTodos     contained TODO
