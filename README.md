@@ -5,13 +5,13 @@ jaksel programming language plugin for (n)vim
 
 Installation can be done using any plugin manager, below are some of the helper lines for popular plugin managers:
 
-- [Vim 8 Package Manager](http://vimhelp.appspot.com/repeat.txt.html#packages)
+- [Vim 8 Package](http://vimhelp.appspot.com/repeat.txt.html#packages)
 
 ```
 git clone https://github.com/cocatrip/vim-jaksel.git ~/.vim/pack/plugins/start/vim-jaksel
 ```
 
-- [Neovim Package Manager](https://neovim.io/doc/user/repeat.html#packages)
+- [Neovim Package](https://neovim.io/doc/user/repeat.html#packages)
 
 ```
 git clone https://github.com/cocatrip/vim-jaksel.git ~/.local/share/nvim/site/pack/plugins/start/vim-jaksel
