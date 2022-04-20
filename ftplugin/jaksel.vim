@@ -1,4 +1,3 @@
-setlocal comments=s:IMO,s:FYI
 setlocal iskeyword+=$
 setlocal tabstop=2
 setlocal softtabstop=2
