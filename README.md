@@ -1,6 +1,24 @@
 # vim-jaksel
 jaksel programming language plugin for (n)vim
 
+## Features
+
+- Syntax Highlighting for:
+    - [x] Operator
+    - [x] Variable
+    - [x] Boolean
+    - [x] Built-in Function
+    - [x] String
+    - [x] Condition
+    - [x] Loop
+    - [x] Function
+    - [x] Function's Arguments
+    - [x] Comment
+    - [x] Exception
+    - [x] Special Character
+
+- More Coming Soon...
+
 ## Installation
 
 Installation can be done using any plugin manager, below are some of the helper lines for popular plugin managers:
