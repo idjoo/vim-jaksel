@@ -1,4 +1,5 @@
 # vim-jaksel
+
 jaksel programming language plugin for (n)vim
 
 ## Features
@@ -16,6 +17,8 @@ jaksel programming language plugin for (n)vim
     - [x] Comment
     - [x] Exception
     - [x] Special Character
+
+- Run current jaksel file using `:JakselRun`
 
 - More Coming Soon...
 
@@ -51,4 +54,20 @@ Plug 'cocatrip/vim-jaksel'
 
 ```
 use 'cocatrip/vim-jaksel'
+```
+
+## Configuration
+
+You can map the `:JakselRun` function in your config file
+
+### Neovim
+
+```
+vim.api.nvim_set_keymap("n", "<F9>", "<cmd>JakselRun<CR>", { silent = true })
+```
+
+### Vim
+
+```
+noremap <F9> :JakselRun<CR>
 ```
