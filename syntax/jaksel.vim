@@ -37,7 +37,7 @@ hi def link     jakselBuiltIn             Function
 
 
 " String
-syn region      jakselString              start=/\v"/ skip=/\v\\./ end=/\v"/
+syn region      jakselString              start=/\v"/ skip=/\v\\./ end=/\v"/ contains=jakselSpecialCharacter,jakselSpecial
 
 hi def link     jakselString              String
 
@@ -58,7 +58,7 @@ hi def link     jakselRepeat              Repeat
 syn match       jakselFunctionStatement   /\(call\|so about\|thats it sih\)/
 syn match       jakselFunctionAsync       /\(overthinking\)/
 syn match       jakselFunction            /\(call \|so about \|overthinking \)\@<=\w*/
-syn match       jakselFunctionArgs        /\(\(call \|so about \|overthinking \)\w* \)\@<=[^$]*/
+syn match       jakselFunctionArgs        /\(\(call \|so about \|overthinking \)\w* \)\@<=[^$]*/ contains=jakselString skipwhite
 
 hi def link     jakselFunctionAsync       Statement
 hi def link     jakselFunctionStatement   Statement
@@ -77,3 +77,11 @@ hi def link     jakselComment             Comment
 syn match       jakselException           /\(trust issue\|backstab\|yaudahlahya\)/
 
 hi def link     jakselException           Exception
+
+
+" Soecial Character
+syn match       jakselSpecial             "\\\d\d\d\|\\."
+syn match       jakselSpecialCharacter    "'\\.'"
+
+hi def link     jakselSpecial             Special
+hi def link     jakselSpecialCharacter    SpecialChar
