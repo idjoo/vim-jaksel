@@ -1,3 +1,22 @@
+function! jaksel#cmd#Install(bang, ...) abort
+  echo "Downloading jaksel..."
+  let download = "curl https://api.github.com/repos/RioChndr/jaksel-language/releases/latest | jq '.[\"tarball_url\"]' | xargs -I {} curl -L {} -o jaksel-language.tar.gz"
+
+  echo "Extracting jaksel..."
+  let extract = "tar -xzf jaksel-language.tar.gz"
+  let status = system(l:extract)
+
+  echo "Installing jaksel..."
+  let install = "cp RioChndr-jaksel-language-*/jaksel-interpreter.js ~/.local/bin/jaksel"
+  let status = system(l:install)
+
+  echo "Cleaning up..."
+  let clean = "rm -rf RioChndr-jaksel-language-* jaksel-language.tar.gz"
+  let status = system(l:clean)
+
+  echo "Done! Installed in ~/.local/bin/jaksel"
+endfunction
+
 function! jaksel#cmd#Run(bang, ...) abort
   " Command to run
   let cmd = ["jaksel"]
