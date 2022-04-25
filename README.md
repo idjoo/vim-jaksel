@@ -18,7 +18,9 @@ jaksel programming language plugin for (n)vim
     - [x] Exception
     - [x] Special Character
 
-- Run current jaksel file using `:JakselRun`
+- Run current jaksel file using `:JakselRun` command
+
+- Install jaksel interpreter using `:JakselInstall` command
 
 - More Coming Soon...
 
