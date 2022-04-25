@@ -58,6 +58,10 @@ Plug 'cocatrip/vim-jaksel'
 use 'cocatrip/vim-jaksel'
 ```
 
+Then, if you haven't install the interpreter, you can install it by simply running `:JakselInstall`
+
+This will install the `jaksel` interpreter in your `~/.local/bin` directory, so make sure to add `~/.local/bin` to your `$PATH`
+
 ## Configuration
 
 You can map the `:JakselRun` function in your config file
